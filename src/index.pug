@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet" href="css/style.min.css")
+
+        title Rosti
+
+    body
+        include template/header.pug
+
+        include template/mixins/product
+        include template/mixins/contact
+
+        .page
+            include template/summary.pug
+            include template/products.pug
+            include template/about.pug
+            include template/partners.pug
+            include template/callback.pug
+            include template/callback-form.pug
+            include template/contacts.pug
+
+        include template/footer.pug
+
+    script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="js/main.min.js")

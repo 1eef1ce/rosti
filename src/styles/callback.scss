@@ -1,0 +1,96 @@
+@import 'variables';
+@import 'fonts';
+
+.callback {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  background: $colorDarkBlue;
+  color: #fff;
+
+  @include md {
+    flex-direction: row;
+  }
+
+  &__inner {
+    margin: 0 44px;
+    text-align: center;
+
+    @include md {
+      width: 50%;
+      margin: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $colorYellow;
+
+      @include md {
+        border-bottom: 0;
+        border-right: 1px solid $colorYellow;
+      }
+    }
+
+    &--left {
+      padding-bottom: 32px;
+
+      @include md {
+        padding: 0 30px 0 0;
+        text-align: right;
+      }
+    }
+
+    &--right {
+      padding-top: 20px;
+
+      @include md {
+        padding: 0 0 0 30px;
+        text-align: left;
+        max-width: 230px;
+      }
+
+      .btn {
+        @include md {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Oswald';
+    font-size: 16px;
+    line-height: 1;
+
+    @include lg {
+      font-size: 18px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+
+  &__phone {
+    display: inline-block;
+    font-family: 'Oswald';
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+
+    @include lg {
+      font-size: 36px;
+    }
+  }
+
+  .btn {
+    color: $colorGrey;
+  }
+}
+

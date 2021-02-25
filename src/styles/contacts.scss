@@ -1,0 +1,103 @@
+@import 'variables';
+@import 'fonts';
+
+.contacts {
+  padding: 27px 0;
+  background: url("../assets/images/bg-map.jpg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+
+  @include xl {
+    padding: 55px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    background: rgba(45, 55, 108, 0.6);
+    border: 10px solid #fff;
+    border-right-width: 0;
+    border-left-width: 0;
+    padding: 25px 16px;
+    margin: 0 -16px;
+
+    @include md {
+      border-right-width: 10px;
+      border-left-width: 10px;
+      margin: 0;
+    }
+
+    @include xl {
+      padding: 30px 30px 60px;
+    }
+  }
+
+  &__title {
+
+    @include xl {
+      width: 50%;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+
+    @include md {
+      flex-direction: row;
+    }
+
+    @include xl {
+      margin-top: 0;
+    }
+  }
+}
+
+.contact {
+  margin-bottom: 16px;
+
+  @include md {
+    width: 50%;
+  }
+
+  @include lg {
+    width: 25%;
+    margin-bottom: 22px;
+  }
+
+  &__title {
+    font-family: 'Oswald';
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  &__phone {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 2;
+    color: $colorYellow;
+
+    &:hover,
+    &:focus {
+      color: lighten($colorYellow, 25%);
+
+    }
+  }
+}
+

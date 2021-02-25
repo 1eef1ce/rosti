@@ -1,0 +1,89 @@
+.modal
+    .modal__container
+        .modal__close
+            svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(fill-rule="evenodd" clip-rule="evenodd" d="M14 1.4L12.6 0L7 5.6L1.4 0L0 1.4L5.6 7L0 12.6L1.4 14L7 8.4L12.6 14L14 12.6L8.4 7L14 1.4Z" fill="#2D376C")
+
+        .modal__body
+            .modal__title
+                | НУЖНА ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ?
+                |
+                span СВЯЖИТЕСЬ С НАМИ
+
+            form.form
+                .form__row
+                    .form__col.form__col--left
+                        .input-group
+                            label.input-group__label(for="name") Ваше имя
+                            input.input-group__input(
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Иван"
+                            required
+                            autocomplete="on"
+                            )
+
+                        .input-group
+                            label.input-group__label(for="surname") Ваша фамилия
+                            input.input-group__input(
+                            type="text"
+                            id="surname"
+                            name="surname"
+                            placeholder="Иванов"
+                            autocomplete="on"
+                            )
+
+                        .input-group
+                            label.input-group__label(for="tel") Номер телефона
+                            input.input-group__input(
+                            type="tel"
+                            id="tel"
+                            name="tel"
+                            placeholder="+7 000 000 00 00"
+                            required
+                            autocomplete="on"
+                            )
+
+                        .input-group
+                            label.input-group__label(for="email") E-mail
+                            input.input-group__input(
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="primer@mail.ru"
+                            autocomplete="on"
+                            )
+
+                    .form__col.form__col--right
+                        .input-group
+                            label.input-group__label(for="message") Комментарий
+                            textarea.input-group__textarea(
+                                id="message"
+                                name="message"
+                                placeholder="Введите ваш комментарий"
+                            )
+
+                .form__row
+                    .form__col.form__col--left
+                        .input-group.checkbox-group
+                            .checkbox
+                                input.checkbox__input(
+                                type="checkbox"
+                                id="check"
+                                required
+                                checked
+                                )
+                                label.checkbox__label(for="check")
+                                    | Я принимаю условия
+                                    |
+                                    a.link(href="#") пользовательского соглашения
+                                    |
+                                    | и
+                                    |
+                                    a.link(href="#") политики конфиденциальности
+
+                    .form__col.form__col--right
+                        button.btn.btn--centered(
+                            type="submit"
+                        ) отправить

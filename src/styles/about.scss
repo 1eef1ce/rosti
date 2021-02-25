@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'fonts';
+
+.about {
+  padding-top: 100px;
+  background: url("../assets/images/bg-md.svg") no-repeat top left;
+  background-size: contain;
+
+  @include md {
+    padding-top: 30px;
+    background-size: auto;
+  }
+
+  @include xl {
+    padding-top: 65px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include lg {
+      flex-direction: row;
+      margin: 0 -30px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include lg {
+      width: calc(50% - 60px);
+      margin: 0 30px;
+    }
+  }
+
+  &__title {
+
+    @include xl {
+      width: 60%;
+    }
+  }
+
+  &__video {
+    margin-bottom: 16px;
+
+    @include xl {
+      margin: auto 0 30px;
+    }
+  }
+}
+

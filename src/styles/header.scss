@@ -1,0 +1,179 @@
+@import 'variables';
+@import 'fonts';
+
+.header {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid $colorDarkBlue;
+
+  &.sticky {
+    position: sticky;
+    background: #fff;
+    border-bottom: 0;
+    box-shadow: $box-shadow;
+    animation: smoothScroll 0.5s forwards;
+  }
+
+  @include lg {
+    border-bottom: 0;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 16px;
+
+    @include lg {
+      height: 88px;
+    }
+
+    @include xl {
+      max-width: 1260px;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 97px;
+
+    @include lg {
+      width: 131px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__email {
+    display: none;
+    font-family: 'Oswald';
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    @include lg {
+      display: inline-block;
+    }
+  }
+
+  &__phone {
+    font-family: 'Oswald';
+    font-size: 16px;
+    color: $colorDarkBlue;
+  }
+
+  &-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    top: 65px;
+    background-color: #fff;
+    box-shadow: $box-shadow;
+
+    @include lg {
+      display: block;
+      position: static;
+      box-shadow: none;
+      width: 50%;
+      max-width: 350px;
+      background-color: transparent;
+    }
+    
+    &.active {
+      display: block;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 0 0;
+      text-align: center;
+
+      @include lg {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+      }
+    }
+
+    &__item {
+      font-family: 'Oswald';
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+
+      @include lg {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-toggler {
+
+    @include lg {
+      display: none;
+    }
+
+    &__bar {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: $colorDarkBlue;
+      position: relative;
+      transform: rotate(0);
+      transform-origin: left center;
+      transition: all 0.2s ease;
+
+      & + & {
+        margin-top: 3px;
+      }
+    }
+
+    &.active {
+
+      .header-toggler__bar {
+
+        &:nth-of-type(1) {
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          transform: rotate(-45deg);
+          top: 2px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+

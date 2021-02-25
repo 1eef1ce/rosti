@@ -1,0 +1,21 @@
+footer.footer
+    .container
+        .footer__inner
+            a.footer__logo(href="/"): img(src="assets/images/logo.png" alt="rosti" title="rosti")
+            nav.footer-nav
+                ul.footer-nav__list
+                    li.footer-nav__item: a.footer-nav__link(href="#") Навесное оборудование
+                    li.footer-nav__item: a.footer-nav__link(href="#") Комплектующие
+                    li.footer-nav__item: a.footer-nav__link(href="#") Политика конфиденциальности
+                    li.footer-nav__item: a.footer-nav__link(href="#") Скачать брошюры
+
+            .footer-catalog
+                ul.footer-catalog__list
+                    - for (var value = 300; value <= 400; value+=10)
+                        li.footer-catalog__item
+                            a.footer-catalog__link(href='MHL310' + value)= 'MHL' + value
+
+            .footer__copyright
+                | Сайт разработан <br>digital-агентством
+                |
+                a.link(href="#") Uralmedias

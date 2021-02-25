@@ -1,0 +1,61 @@
+@import 'variables';
+@import 'fonts';
+
+.summary {
+  padding-top: 96px;
+  overflow: hidden;
+
+  @include md {
+    background: url("../assets/images/bg-lg.svg") no-repeat left;
+    background-size: contain;
+  }
+
+  @include xl {
+    padding-top: 88px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include md {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__text{
+
+    @include lg {
+      width: 50%;
+      max-width: 600px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: -1;
+    margin-top: -10%;
+    height: 250px;
+
+    @include lg {
+      width: 50%;
+      margin-top: 0;
+      height: 450px;
+    }
+
+    @include xl {
+      width: auto;
+      margin-right: -50%;
+      height: 700px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      object-position: right;
+    }
+  }
+}
+

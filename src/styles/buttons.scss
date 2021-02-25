@@ -1,0 +1,31 @@
+@import 'variables';
+@import 'fonts';
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 44px;
+  padding: 0;
+  background: $colorYellow;
+  box-shadow: $box-shadow;
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $colorGrey;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: lighten($colorYellow, 25%);
+    color: $colorGrey;
+  }
+
+  &--centered {
+    margin: 0 auto;
+  }
+}

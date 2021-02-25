@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'fonts';
+
+.form {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    &--left {
+
+      @include lg {
+        width: 380px;
+        margin: 0 -10px;
+
+        .checkbox-group {
+          width: 100%;
+        }
+      }
+    }
+
+    &--right {
+
+      @include lg {
+        width: 260px;
+        margin: 0 -10px 0 10px;
+      }
+
+      .input-group {
+
+        @include lg {
+          width: 100%;
+        }
+
+        &__textarea {
+
+          @include lg {
+            height: calc(100% - 24px);
+          }
+
+          @include xl {
+            height: calc(100% - 28px);
+          }
+        }
+      }
+
+      .btn {
+        @include lg {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+}

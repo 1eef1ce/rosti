@@ -1,0 +1,26 @@
+$fontRoboto: 'Roboto', sans-serif;
+$fontOswald: 'Oswald', sans-serif;
+
+$colorLight: #F2F2F2;
+$colorGrey: #474747;
+$colorLightBlue: #1E88E5;
+$colorDarkBlue: #2D376C;
+$colorYellow: #FFC001;
+
+$box-shadow: 0 4px 10px rgba(45, 55, 108, 0.3);
+
+@mixin md {
+  @media (min-width: 768px) {
+    @content
+  }
+}
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content
+  }
+}
+@mixin xl {
+  @media (min-width: 1440px) {
+    @content
+  }
+}

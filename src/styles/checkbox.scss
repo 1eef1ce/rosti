@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'fonts';
+
+.checkbox {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked {
+
+      & ~.checkbox__label {
+
+        &::before {
+          background-color: $colorDarkBlue;
+        }
+
+        &::after {
+          left: 5px;
+          top: 2px;
+          width: 4px;
+          height: 7px;
+          border: solid #fff;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    padding-left: 24px;
+    font-size: 12px;
+    line-height: 1.5;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+      border: 1px solid $colorDarkBlue;
+      border-radius: 2px;
+      top: 0;
+      left: 0;
+      margin: 0;
+    }
+  }
+}
+

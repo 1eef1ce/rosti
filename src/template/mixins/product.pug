@@ -1,0 +1,14 @@
+mixin product(options)
+    .product&attributes(attributes)
+        .product__img
+            img(src=options.image alt="" title="")
+        .product__body
+            h3.h3.product__title= options.title
+            .product__description= options.description
+            - var values = options.values;
+            ul.product__list
+                each val in values
+                    li.product__item
+                        a.product__link(href=val)= val
+            a.link-more(href=options.href)
+                | Все модели

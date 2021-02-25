@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'fonts';
+
+.partners {
+  padding: 35px 0;
+
+  @include xl {
+    padding: 60px 0;
+  }
+
+  &__slider {
+    padding: 0 16px;
+    margin: 0 -16px;
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+.partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  opacity: 0.5;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+

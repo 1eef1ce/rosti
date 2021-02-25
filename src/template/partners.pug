@@ -1,0 +1,11 @@
+.partners
+    .container
+        h3.h3
+            | Нам доверяют
+
+        .swiper-container.partners__slider
+            .swiper-wrapper
+                - for (var i = 1; i < 8; i++)
+                    .swiper-slide
+                        .partner
+                            img(src='assets/images/logo-partner-'+i+'.png')

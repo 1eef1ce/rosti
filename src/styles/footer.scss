@@ -1,0 +1,105 @@
+@import 'variables';
+@import 'fonts';
+
+.footer {
+  padding: 30px 0;
+  background: $colorLight;
+  text-align: center;
+
+  @include xl {
+    padding-top: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include md {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    @include lg {
+      justify-content: normal;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 131px;
+    margin: 0 auto 16px;
+
+    @include md {
+      margin: 0 40px 0 0;
+    }
+
+    @include lg {
+      margin: 0 60px 0 0;
+    }
+  }
+
+  &-nav {
+
+    @include md {
+      margin-right: 40px;
+    }
+
+    @include lg {
+      margin-right: 60px;
+    }
+
+    &__list {
+      margin-bottom: 16px;
+    }
+
+    &__item {
+      margin-bottom: 6px;
+    }
+
+    &__link {
+      line-height: 2;
+    }
+  }
+
+  &-catalog {
+    display: none;
+
+    @include lg {
+      display: block;
+      max-width: 390px;
+    }
+
+    &__item {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 30px 6px 0;
+
+      &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: $colorYellow;
+        border-radius: 100%;
+        margin-top: -0.2em;
+        margin-right: 8px;
+      }
+    }
+
+    &__link {
+      line-height: 2;
+    }
+  }
+
+  &__copyright {
+    font-size: 10px;
+    line-height: 1.5;
+
+    @include md {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+}
+

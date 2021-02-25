@@ -1,0 +1,8 @@
+mixin contact(options)
+    .contact&attributes(attributes)
+        .contact__title= options.title
+        .contact__text= options.text
+        - var values = options.numbers;
+        .contact__links
+            each val in values
+                a.contact__phone(href="#")= val

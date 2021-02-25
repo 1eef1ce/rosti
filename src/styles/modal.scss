@@ -1,0 +1,83 @@
+@import 'variables';
+@import 'fonts';
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+  
+  &.open {
+    display: flex;
+  }
+
+  &__container {
+    background: #fff;
+    width: 95%;
+    max-width: 600px;
+    max-height: 100vh;
+    margin: auto;
+    position: relative;
+    overflow-y: auto;
+
+    @include lg {
+      max-width: 800px;
+      padding: 10px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    @include lg {
+      top: 25px;
+      right: 25px;
+    }
+
+    @include xl {
+      top: 45px;
+      right: 45px;
+    }
+  }
+
+  &__body {
+    border: 10px solid $colorDarkBlue;
+    padding: 20px 16px;
+
+    @include lg {
+      padding: 25px;
+      background: url("../assets/images/bg-modal.svg") no-repeat right;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    font-family: 'Oswald';
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+
+    @include lg {
+      font-size: 28px;
+    }
+
+    @include xl {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    span {
+      color: $colorDarkBlue;
+    }
+  }
+}
